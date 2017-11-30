@@ -10,7 +10,7 @@ ARG GOSU_PKG=gosu-amd64
 ARG GOSU_SHA=8068f973713558e750b5cbe74e2c5a40d6aeb631
 ARG TINI_REPO=https://github.com/krallin/tini/releases/download/v0.16.1/
 ARG TINI_PKG=tini-static-amd64
-ARG TINI_SHA=7d00da20acc5c3eb21d959733917f6672b57dabb
+ARG TINI_SHA=d1cb5d71adc01d47e302ea439d70c79bd0864288
 
 LABEL base-image="CentOS 7" \
       vendor="Jaakko Leskinen"
