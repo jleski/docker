@@ -3,12 +3,12 @@ steps:
   build_image:
     title: Building Docker Image
     type: build
-    image_name: jleskinen/centos-java8
-    working_directory: ./centos-java8/
+    image_name: jleskinen/centos
+    working_directory: ./centos/
     dockerfile: Dockerfile
     tag: '${{CF_BRANCH}}'
   push_to_registry:
-    title: Pushing to Docker Registry (with credentials)
+    title: Pushing to Docker Registry
     type: push
     candidate: '${{build_image}}'
     tag: latest

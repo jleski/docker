@@ -8,7 +8,7 @@ steps:
     dockerfile: Dockerfile
     tag: '${{CF_BRANCH}}'
   push_to_registry:
-    title: Pushing to Docker Registry (with credentials)
+    title: Pushing to Docker Registry
     type: push
     candidate: '${{build_image}}'
     tag: latest
