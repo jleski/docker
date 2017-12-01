@@ -1,0 +1,9 @@
+version: '1.0'
+steps:
+  BuildingDockerImage:
+    title: Building Docker Image
+    type: build
+    image_name: jleskinen/centos-java8
+    working_directory: ./centos-java8/
+    dockerfile: Dockerfile
+    tag: latest
