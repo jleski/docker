@@ -22,6 +22,3 @@ yum clean all
 ENV JAVA_HOME /usr/java/${javahome}
 
 WORKDIR /
-
-ENV container docker
-CMD ["/usr/sbin/init"]
