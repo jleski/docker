@@ -3,7 +3,11 @@ FROM centos:7
 MAINTAINER "Jaakko Leskinen" <jaakko.leskinen@gmail.com>
 ENV container docker
 
+# set timezone
 RUN ln -sf /usr/share/zoneinfo/Europe/Helsinki /etc/localtime
+
+# install updates
+RUN yum update -y -q
 
 ARG GOSU_REPO=https://github.com/tianon/gosu/releases/download/1.10
 ARG GOSU_PKG=gosu-amd64
