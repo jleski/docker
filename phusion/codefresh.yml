@@ -3,12 +3,12 @@ steps:
   build_image:
     title: Building Docker Image
     type: build
-    image_name: jleskinen/centos
-    working_directory: ./centos/
+    image_name: jleskinen/phusion
+    working_directory: ./phusion/
     dockerfile: Dockerfile
     tag: '${{CF_BRANCH}}'
   push_to_registry:
-    title: Pushing to Docker Registry
+    title: Pushing to Docker Hub
     type: push
     candidate: '${{build_image}}'
     tag: latest
