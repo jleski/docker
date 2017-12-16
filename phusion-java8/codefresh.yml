@@ -1,0 +1,15 @@
+version: '1.0'
+steps:
+  build_image:
+    title: Building Docker Image
+    type: build
+    image_name: jleskinen/phusion-java8
+    working_directory: ./phusion-java8/
+    dockerfile: Dockerfile
+    tag: '${{CF_BRANCH}}'
+  push_to_registry:
+    title: Pushing to Docker Registry
+    type: push
+    candidate: '${{build_image}}'
+    tag: latest
+    registry: dockerhub
