@@ -1,0 +1,15 @@
+version: '1.0'
+steps:
+  build_image:
+    title: Building Docker Image
+    type: build
+    image_name: jleskinen/vpnc-socks
+    working_directory: ./vpnc-socks/
+    dockerfile: Dockerfile
+    tag: '${{CF_BRANCH}}'
+  push_to_registry:
+    title: Pushing to Docker Registry
+    type: push
+    candidate: '${{build_image}}'
+    tag: latest
+    registry: dockerhub
